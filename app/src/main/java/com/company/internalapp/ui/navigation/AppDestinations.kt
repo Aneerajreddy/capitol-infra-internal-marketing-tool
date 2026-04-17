@@ -1,0 +1,25 @@
+package com.company.internalapp.ui.navigation
+
+sealed class AppDestination(val route: String, val title: String) {
+    data object Login : AppDestination("login", "Login")
+    data object Home : AppDestination("home", "Home")
+    data object AssociateView : AppDestination("associate_view", "Associate View")
+    data object AssociateProfile : AppDestination("associate_profile", "Associate Profile")
+    data object CreateLead : AppDestination("create_lead", "Create Lead")
+    data object GetAgentLeads : AppDestination("get_agent_leads", "Get Agent Leads")
+    data object ChangePassword : AppDestination("change_password", "Change Password")
+    data object PrivacyPolicy : AppDestination("privacy_policy", "Privacy Policy")
+    data object Projects : AppDestination("projects", "Projects")
+    data object DirectTeam : AppDestination("direct_team", "Direct Team")
+    data object TotalTeam : AppDestination("total_team", "Total Team")
+    data object MaterialRequest : AppDestination("material_request", "Material Request")
+    data object VehicleRequest : AppDestination("vehicle_request", "Vehicle Request")
+    data object Wallet : AppDestination("wallet", "Wallet")
+    data object Bonanza : AppDestination("bonanza", "Bonanza")
+    data object Mela : AppDestination("mela", "Mela")
+    data object SalesHistory : AppDestination("sales_history", "Sales History")
+    data object SiteIncharge : AppDestination("site_incharge", "Site Incharge")
+    data object Creatives : AppDestination("creatives", "Creatives")
+    data object Notifications : AppDestination("notifications", "Notifications")
+    data object AddAssociate : AppDestination("add_associate", "Add Associate")
+}
