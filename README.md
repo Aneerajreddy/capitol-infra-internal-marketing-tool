@@ -1,50 +1,37 @@
-# Internal Sales & Operations Android App
+# Internal Sales & Operations Android App (Scaffold)
 
-This repository contains a complete Android implementation generated from the provided SRS for internal sales and operations workflows.
+This repository contains a production-ready Android scaffold generated from the provided SRS for an internal sales and operations app.
 
-## Implemented modules
+## Implemented architecture
 
-- Authentication (mobile + password/OTP)
-- Role-based dashboard and sidebar
-- Associate profile
-- Team management (Direct Team, Total Team, Add Associate)
-- Lead management (create, assign, list, search, status update)
-- Projects list with pricing and availability
-- Material request (submit + status tracking)
-- Vehicle request (submit + approval status tracking)
-- Wallet (balance, withdrawal request, transaction history)
-- Bonanza incentives and eligibility display
-- Mela/Event updates
-- Sales history (individual/team summary)
-- Site incharge directory with contact details
-- Creatives library with share/download URLs
-- Notifications feed
-- Change password
-- Privacy policy
+- **Kotlin + Jetpack Compose + Material 3**
+- **Role-based navigation and dashboard cards** (Admin / Manager / Associate)
+- **Authentication flow** (mobile + password/OTP simulation)
+- **Lead management**: create lead, list leads, filter/search, status updates
+- **Sidebar drawer menu** with role-aware options
+- **Module scaffolds** for projects, requests, notifications, and all listed business modules
+- **Security baseline**:
+  - HTTPS-only network policy (`network_security_config`)
+  - token-ready app state structure
 
-## Technology stack
+## Package structure
 
-- Kotlin
-- Jetpack Compose + Material 3
-- MVVM with state management in `AppViewModel`
-- In-memory repository for live demo (`FakeBackendRepository`)
+- `model/`: entity and enum definitions
+- `data/`: repository layer (`FakeBackendRepository`)
+- `viewmodel/`: centralized UI state + business actions
+- `ui/navigation/`: destination and drawer menu definitions
+- `ui/screens/`: Compose screens (login, dashboard, lead workflows)
 
-## Local run/debug readiness
+## Build prerequisites
 
-- Gradle wrapper included (`gradlew`, `gradlew.bat`, `gradle/wrapper/*`) for Android Studio import consistency
-- Works with JDK 17 in Android Studio (set **Gradle JDK = 17**)
-- Script available to validate local setup: `bash scripts/check-android-env.sh`
+- Android Studio Iguana+ (or equivalent)
+- Android SDK 35
+- JDK 17
 
-## Security baseline
+## Next integration steps
 
-- HTTPS-only network policy configured via `network_security_config.xml`
-- Role-based module visibility
-
-## Run and debug
-
-See [RUN_LIVE.md](RUN_LIVE.md) for full Android Studio + CLI run/debug steps and demo credentials.
-
-
-## Binary-safe note
-
-If your code host strips binary files, regenerate `gradle/wrapper/gradle-wrapper.jar` locally with `gradle wrapper --gradle-version 8.14.3` before running `./gradlew`.
+1. Replace `FakeBackendRepository` with Retrofit/Ktor API services.
+2. Add JWT storage + refresh handling (EncryptedSharedPreferences/DataStore).
+3. Add push notifications (Firebase Cloud Messaging).
+4. Add request modules and approvals with backend workflows.
+5. Add instrumentation and unit test coverage for FR acceptance.
