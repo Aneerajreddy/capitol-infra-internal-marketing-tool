@@ -78,7 +78,7 @@ private fun HomeContainer(uiState: AppUiState, viewModel: AppViewModel) {
         drawerContent = {
             ModalDrawerSheet {
                 Text(
-                    text = "Internal Sales & Ops",
+                    text = "Capitol Infra",
                     style = MaterialTheme.typography.titleLarge,
                     modifier = Modifier.padding(16.dp)
                 )
