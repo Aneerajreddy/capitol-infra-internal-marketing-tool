@@ -1,0 +1,9 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; }
+.layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+.sidebar { background: #111827; color: #fff; padding: 16px; }
+.sidebar a { display: block; color: #d1d5db; margin: 8px 0; text-decoration: none; }
+.main { padding: 20px; }
+.card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border-bottom: 1px solid #e5e7eb; text-align: left; padding: 8px; }
+.metric { font-size: 24px; font-weight: 700; }
