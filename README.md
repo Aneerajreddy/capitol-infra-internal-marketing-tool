@@ -45,3 +45,9 @@ APK output:
 ## Environment files
 - `backend/.env`
 - `backend/.env.example`
+
+
+## Conflict verification
+```bash
+bash scripts/verify-no-conflicts.sh
+```
