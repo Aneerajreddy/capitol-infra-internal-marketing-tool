@@ -51,3 +51,13 @@ APK output:
 ```bash
 bash scripts/verify-no-conflicts.sh
 ```
+
+
+## Automatic merge-conflict resolution
+```bash
+# Resolve known conflicted files using current branch content (ours)
+bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
+
+# Or prefer incoming main versions for conflicted files
+bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i theirs
+```

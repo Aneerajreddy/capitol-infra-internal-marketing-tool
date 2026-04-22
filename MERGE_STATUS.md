@@ -26,3 +26,9 @@ Then verify:
 ```bash
 bash scripts/verify-no-conflicts.sh
 ```
+
+For repeat merge failures, use:
+
+```bash
+bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
+```
