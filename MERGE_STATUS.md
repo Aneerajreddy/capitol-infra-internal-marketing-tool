@@ -45,3 +45,9 @@ Primary fix command for repeated failures:
 REMOTE_URL=https://github.com/Aneerajreddy/capitol-infra-internal-marketing-tool.git \
   bash scripts/merge-pr-safe.sh main codex/develop-internal-sales-operations-android-app-frne8i ours
 ```
+
+If merge issues still persist, bypass history by creating a clean new repository:
+
+```bash
+bash scripts/create-clean-repo.sh ../capitol-infra-internal-marketing-tool-clean
+```

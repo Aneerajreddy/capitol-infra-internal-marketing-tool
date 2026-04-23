@@ -78,3 +78,13 @@ bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales
 REMOTE_URL=https://github.com/Aneerajreddy/capitol-infra-internal-marketing-tool.git \
   bash scripts/merge-pr-safe.sh main codex/develop-internal-sales-operations-android-app-frne8i ours
 ```
+
+
+### Create a brand-new clean repository
+```bash
+# creates a fresh git repo with only current code, no old PR/merge history
+bash scripts/create-clean-repo.sh ../capitol-infra-internal-marketing-tool-clean
+
+# optionally set remote and push
+bash scripts/create-clean-repo.sh ../capitol-infra-internal-marketing-tool-clean https://github.com/<you>/<new-repo>.git
+```
