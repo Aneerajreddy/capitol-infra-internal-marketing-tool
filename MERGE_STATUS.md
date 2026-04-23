@@ -32,3 +32,9 @@ For repeat merge failures, use:
 ```bash
 bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
 ```
+
+If remote fetch is blocked but local `main` already exists, run:
+
+```bash
+NO_FETCH=1 bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
+```

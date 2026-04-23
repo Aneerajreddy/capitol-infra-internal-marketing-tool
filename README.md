@@ -61,3 +61,13 @@ bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales
 # Or prefer incoming main versions for conflicted files
 bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i theirs
 ```
+
+
+### Merge troubleshooting
+```bash
+# Diagnose current merge blockers
+bash scripts/merge-doctor.sh
+
+# Retry merge; uses local base branch if fetch fails
+bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
+```
