@@ -71,3 +71,10 @@ bash scripts/merge-doctor.sh
 # Retry merge; uses local base branch if fetch fails
 bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
 ```
+
+
+### One-command PR merge fix
+```bash
+REMOTE_URL=https://github.com/Aneerajreddy/capitol-infra-internal-marketing-tool.git \
+  bash scripts/merge-pr-safe.sh main codex/develop-internal-sales-operations-android-app-frne8i ours
+```

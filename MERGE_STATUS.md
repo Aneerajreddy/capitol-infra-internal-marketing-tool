@@ -38,3 +38,10 @@ If remote fetch is blocked but local `main` already exists, run:
 ```bash
 NO_FETCH=1 bash scripts/resolve-merge-conflicts.sh origin main codex/develop-internal-sales-operations-android-app-frne8i ours
 ```
+
+Primary fix command for repeated failures:
+
+```bash
+REMOTE_URL=https://github.com/Aneerajreddy/capitol-infra-internal-marketing-tool.git \
+  bash scripts/merge-pr-safe.sh main codex/develop-internal-sales-operations-android-app-frne8i ours
+```
